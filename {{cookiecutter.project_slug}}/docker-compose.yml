@@ -7,9 +7,9 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./storage/lib:/var/lib/mypc
-      - ./storage/log:/var/log/mypc
-      - .:/usr/share/webapps/mypc
+      - ./storage/lib:/var/lib/{{cookiecutter.project_slug}}
+      - ./storage/log:/var/log/{{cookiecutter.project_slug}}
+      - .:/usr/share/webapps/{{cookiecutter.project_slug}}
     environment:
       - DJANGO_SETTINGS_MODULE=config.django.settings.local
     links:
